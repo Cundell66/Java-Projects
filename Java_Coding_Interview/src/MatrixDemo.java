@@ -14,7 +14,7 @@ public class MatrixDemo {
         System.out.println("Enter the elements of the matrix");
         for (int i = 0; i < rows; i++){
             for (int k = 0; k < cols; k++){
-                matrix[k][i] = scanner.nextInt();
+                matrix[i][k] = scanner.nextInt();
             }
         }
 
@@ -22,17 +22,18 @@ public class MatrixDemo {
         System.out.println();
         for (int i = 0; i < rows; i++){
             for (int k = 0; k < cols; k++){
-                System.out.print(" ");
-                if (matrix[k][i] < 10){
+                if (matrix[i][k] < 100){
                     System.out.print(" ");
+                    if (matrix[i][k] < 10){
+                        System.out.print(" ");
+                    }
                 }
-                System.out.print(matrix[k][i]);
+                System.out.print(matrix[i][k]);
+                System.out.print(" ");
                 
             }
             System.out.println();
         }
         scanner.close();
-
     }
-    
 }
