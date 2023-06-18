@@ -19,7 +19,6 @@ public class Array_Delete {
         System.out.println("Initial Array " + Arrays.toString(myArray));
         
         //remove contents of index location
-        //int count = 0;
         for (int i = 0, count=0; i < myArray.length; i++){
             if (i == indexToDelete){
                 continue;
