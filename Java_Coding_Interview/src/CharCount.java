@@ -3,16 +3,23 @@ public class CharCount {
      
         String wordToCheck="Hello World";
         
+        //find first space in sentence
         int space = wordToCheck.indexOf(" ");
+        
+        //split sentence into first word and remainder
         String firstWord = wordToCheck.substring(0, space);
         String wordsLeft = wordToCheck.substring(space+1);
         
+        //display first word and the number of characters
         System.out.println(firstWord + "->" + firstWord.length());
-        while (space >= 0){
 
+        //as there may be more that two words in the sentence now split off the remaining words
+        while (space >= 0){
             wordToCheck = wordsLeft;
+            // find next space
             space = wordToCheck.indexOf(" ");
-            if(space>0){
+            // check if there is another space
+            if(space > 0){
                 firstWord = wordToCheck.substring(0, space);
                 wordsLeft = wordToCheck.substring(space+1);
             }
