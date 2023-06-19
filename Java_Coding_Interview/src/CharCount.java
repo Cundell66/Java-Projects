@@ -1,4 +1,9 @@
+/*Program to take a string of any number of words 
+    and output each word and how many characters it 
+    contains in the format "aaaa->#" */
+
 public class CharCount {
+    
     public static void main(String[] args) {
      
         String wordToCheck="Hello World";

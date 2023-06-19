@@ -1,3 +1,5 @@
+/* Program to build and display a matrix of any dimensions containing positive integers*/
+
 import java.util.Scanner;
 
 public class MatrixDemo {
@@ -7,16 +9,18 @@ public class MatrixDemo {
         Scanner scanner = new Scanner(System.in);
         
         //request dimensions of matrix
-        System.out.println("Enter the number of rows in the matrix:");
+        System.out.print("Enter the number of rows in the matrix:");
         int rows = scanner.nextInt();
-        System.out.println("Enter the number of columns in the matrix:");
+        System.out.println();
+        System.out.print("Enter the number of columns in the matrix:");
         int cols = scanner.nextInt();
+        System.out.println();
         
         //initialize matrix
         int matrix[][] = new int[rows][cols];
         
-        //fill matrix
-        System.out.println("Enter the elements of the matrix");
+        //get contents of matrix
+        System.out.println("Enter the " + rows*cols + " integer elements of the matrix");
         for (int i = 0; i < rows; i++){
             for (int k = 0; k < cols; k++){
                 matrix[i][k] = scanner.nextInt();
@@ -28,8 +32,10 @@ public class MatrixDemo {
         //print matrix to console
         for (int i = 0; i < rows; i++){
             for (int k = 0; k < cols; k++){
+                //add space to improve formatting if less that 3 digits
                 if (matrix[i][k] < 100){
                     System.out.print(" ");
+                    //add another space if less than 2 digits
                     if (matrix[i][k] < 10){
                         System.out.print(" ");
                     }
