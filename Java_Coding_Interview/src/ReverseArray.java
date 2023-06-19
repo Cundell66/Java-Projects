@@ -6,7 +6,7 @@ public class ReverseArray {
         
         int[] newArray = new int[myArray.length];
         
-        for (int i = myArray.length - 1, k = 0 ; i > 0 ; i--){
+        for (int i = myArray.length - 1, k = 0 ; i >= 0 ; i--){
             System.out.println(myArray[i]);
             newArray[k++] = myArray[i];
             System.out.println(k);
